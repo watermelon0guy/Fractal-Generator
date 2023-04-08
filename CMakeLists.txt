@@ -9,6 +9,10 @@ set(OpenMP_CXX_LIB_NAMES "libomp" "libiomp5")
 set(OpenMP_libomp_LIBRARY libomp)
 set(OpenMP_libiomp5_LIBRARY libiomp5)
 
+# Компилировать все зависимости внутрь
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+
 #OPENMP
 find_package(OpenMP REQUIRED)
 if(OPENMP_FOUND)

@@ -69,7 +69,7 @@ int main() {
         ClearBackground(BLACK);
         DrawTexture(displayTexture, 0, 0, WHITE);
 
-        render_p(imageBuffer, constant, scale, offset, iterationCount, 11);
+        render_p(imageBuffer, constant, scale, offset, iterationCount, numThreads);
 //        renderSimple(imageBuffer, constant, scale, offset, iterationCount);
         EndDrawing();
     }
