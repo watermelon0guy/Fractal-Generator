@@ -17,11 +17,11 @@ int main() {
     Image imageBuffer = GenImageColor(screenWidth, screenHeight, BLACK);
 
 
-    // (0, -0.79)
-    Vector2 constant(-0.23,-0.79);
+    // (0, -0.79) (-0.23, -0.79) (0.28,0.0113)
+    Vector2 constant(-0.016, -0.665002);
     Vector2 offset(0,0);
     Vector2 constantSpeed(0.001, 0.001);
-    float scale = 0.002f;
+    float scale = 0.003f;
     const float offsetAmount = 20.0f;
     const float zoomSpeed = 1.01f;
     int iterationCount = 100;
@@ -69,7 +69,7 @@ int main() {
         ClearBackground(BLACK);
         DrawTexture(displayTexture, 0, 0, WHITE);
 
-        render_p(imageBuffer, constant, scale, offset, iterationCount, numThreads);
+        render_p(imageBuffer, constant, scale, offset, iterationCount, 11);
 //        renderSimple(imageBuffer, constant, scale, offset, iterationCount);
         EndDrawing();
     }
